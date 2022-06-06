@@ -1,11 +1,3 @@
-.border-game{
-    width: 1300px;
-    border:solid 1px black;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-}
-
 .container{
     width: 100vw;
     height: 100vh;
@@ -15,27 +7,55 @@
     background-color: rebeccapurple;
 }
 
+.borda{
+    border: solid 1px black;
+    
+}
+
+.border-game{
+    width: 1300px;
+    border: 1px black;
+    border-bottom:solid 25px rgb(7, 146, 7);
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #ace4fa);
+}
 
 .pipe{
     position:absolute;
     bottom: 0;
     right: -80px;
     width: 75px;
+    z-index: 1;
     right: 0%;
-    animation: pipe  2s infinite linear; /* conforme o tempo passa quero aumentar a velocidade pelo js */
+    animation: pipe 1.7s infinite linear;
+    /* conforme o tempo passa quero aumentar a velocidade pelo js */
 }
 
+.montanhas{
+    position: absolute;
+    bottom: 0px;
+    width: 150%;
+     animation: move 3s infinite linear;
+}
 
 .mario{
     position: absolute;
     bottom: 0px;
     width: 170px; 
+    z-index: 1;
 }
 
 .jump{
-    
-    animation: jumpe 500ms ease-out;
+    animation: jumpe 600ms ease-out;
+}
 
+.cloud{
+    width: 350px;
+    top:20px;
+    position: absolute;
+    animation: cloud-movimention 20s infinite linear;
 }
 
 @keyframes pipe {
@@ -63,4 +83,26 @@
     100%{
         bottom:0px;
     }
+}
+
+@keyframes move-montanhas {
+    0%{
+        right:0%;
+    }
+    50%{
+        right: 5%;
+    }
+    100%{
+        right: 10%;
+    }
+}
+
+@keyframes cloud-movimention {
+    from{
+        right: -350px;
+    }
+    to{
+        right:  100%;
+    }
+    
 }

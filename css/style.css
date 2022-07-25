@@ -48,6 +48,15 @@
     /* conforme o tempo passa quero aumentar a velocidade pelo js */
 }
 
+.botaoJump{
+    position:absolute;
+    left:0;
+    height: 40px;
+    width:60px;
+    border-radius:5px;
+    bottom: 10px;
+    left: 40px;
+}
 .escondido{
     display:none;
 }

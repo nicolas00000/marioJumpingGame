@@ -11,19 +11,24 @@
 <body>
     
     <div class="container">
-        <div class="borda">
+        
     <div class="border-game">
     <!-- <div class="topo-relogio">
         <span>0</span>:<span>0</span>
     </div> -->
 
-<img src="img/pipe.png" class="pipe">
-<img src="img/clouds.png" class="cloud" alt="">
-<!-- <img class="montanhas move" src="img/mon.png" alt=""> -->
-<img src="img/mario.gif" class="mario ">
+    <img src="img/pipe.png" class="pipe">
+    <img src="img/clouds.png" class="cloud" style="top:20px; z-index: 1;"alt="">
+    <img src="img/clouds.png" class="cloud2" style="top:10px;" alt="">
+    
+    <img src="img/mario.gif" class="mario ">
+   
+    <div class="gameover escondido"  style="position:absolute; ">
+        
+        <img src="img/recarregar.png" onclick="resetar()" style=" position:absolute; cursor:pointer;   height: 44px;" alt="">
+    </div>   
 
     </div>
-</div>
 </div>
 </body>
 <script src="js/scripty.js"></script>

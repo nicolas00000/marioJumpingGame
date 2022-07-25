@@ -11,6 +11,19 @@ let pipe = document.querySelector(".pipe")
     },500)
     }
 
+
+    function jumpButon() {
+       
+            mario.classList.add("jump")
+        
+        setTimeout(() => {
+        
+           mario.classList.remove("jump")
+        
+           },500)
+           
+    }
+
     document.addEventListener("keydown",jump)
     const resetarJogo = document.querySelector(".gameover")
 
@@ -34,6 +47,7 @@ let pipe = document.querySelector(".pipe")
         }
    
     }, 10);
+
 
     function resetar(){
         location.reload();

@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rebeccapurple;
 }
 
 .borda{
@@ -54,8 +53,8 @@
     height: 40px;
     width:60px;
     border-radius:5px;
-    bottom: 10px;
-    left: 40px;
+    bottom: 5px;
+    left: 30px;
 }
 .escondido{
     display:none;

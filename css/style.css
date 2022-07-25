@@ -13,13 +13,28 @@
 }
 
 .border-game{
-    width: 1300px;
+    width: 90%;
     border: 1px black;
     border-bottom:solid 25px rgb(7, 146, 7);
     height: 500px;
     position: relative;
     overflow: hidden;
     background: linear-gradient(#87CEEB, #ace4fa);
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.gameover{
+    background-color: gray;
+    width:130px;
+    height:130px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    border-radius:  15px;
+    font-size:2px;
+
 }
 
 .pipe{
@@ -29,20 +44,18 @@
     width: 75px;
     z-index: 1;
     right: 0%;
-    animation: pipe 1.7s infinite linear;
+    animation: pipe 1.8s infinite linear;
     /* conforme o tempo passa quero aumentar a velocidade pelo js */
 }
 
-.montanhas{
-    position: absolute;
-    bottom: 0px;
-    width: 150%;
-     animation: move 3s infinite linear;
+.escondido{
+    display:none;
 }
 
 .mario{
     position: absolute;
     bottom: 0px;
+    left:0;
     width: 170px; 
     z-index: 1;
 }
@@ -51,12 +64,18 @@
     animation: jumpe 600ms ease-out;
 }
 
-.cloud{
+.cloud,
+.cloud2{
     width: 350px;
-    top:20px;
     position: absolute;
-    animation: cloud-movimention 20s infinite linear;
+    animation: cloud-movimention 24s infinite linear;
 }
+.cloud2{
+    animation: cloudMove 30s infinite linear  !important ; 
+
+}
+
+
 
 @keyframes pipe {
     from{
@@ -85,17 +104,6 @@
     }
 }
 
-@keyframes move-montanhas {
-    0%{
-        right:0%;
-    }
-    50%{
-        right: 5%;
-    }
-    100%{
-        right: 10%;
-    }
-}
 
 @keyframes cloud-movimention {
     from{
@@ -104,5 +112,13 @@
     to{
         right:  100%;
     }
-    
+}
+
+@keyframes cloudMove {
+    from{
+        right: -650px;
+    }
+    to{
+        right:  100%;
+    }
 }

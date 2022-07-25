@@ -12,7 +12,7 @@ let pipe = document.querySelector(".pipe")
     }
 
     document.addEventListener("keydown",jump)
-
+    const resetarJogo = document.querySelector(".gameover")
 
     const loop = setInterval(() => {                            //transformar string em number
         const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '') 
@@ -29,6 +29,12 @@ let pipe = document.querySelector(".pipe")
             mario.style.width = "100px"
             mario.style.marginLeft= "50px"
         
+            resetarJogo.classList.remove("escondido")
+
         }
    
     }, 10);
+
+    function resetar(){
+        location.reload();
+    }

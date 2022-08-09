@@ -3,6 +3,7 @@ let pipe = document.querySelector(".pipe")
 const nuvem = document.querySelector(".cloud")
 const nuvem2 = document.querySelector(".cloud2")
 const resetarJogo = document.querySelector(".gameover")
+const btn = document.querySelector(".botaoJump") 
 let travarJump = true
 
 function start(){
@@ -16,6 +17,8 @@ function start(){
 
     
   
+    document.addEventListener("keydown",pular)
+    btn.addEventListener("click",pular)
 
     const loop = setInterval(() => {                            //transformar string em number
         const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '') 
@@ -37,17 +40,7 @@ function start(){
    
     }, 100);
 
-    function jumpe(){
-        if(travarJump === true){
-            mario.classList.add("jump")
-
-            setTimeout(()=> {
-                mario.classList.remove("jump")
-            },1000)
-
-        }
-    }
-    document.addEventListener("keydown",jumpe)
+ 
 
 }
 
@@ -65,7 +58,7 @@ function resetar(){
 
 }
 
-function jumpButon() {
+function pular() {
     if(travarJump){
         mario.classList.add("jump")
         setTimeout(() => {

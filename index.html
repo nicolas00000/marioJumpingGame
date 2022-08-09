@@ -14,28 +14,30 @@
     <div class="container">
         
     <div class="border-game">
-    <!-- <div class="topo-relogio">
-        <span>0</span>:<span>0</span>
-    </div> -->
+        <!-- <div class="topo-relogio">
+            <span>0</span>:<span>0</span>
+        </div> -->
 
-    <div class="start"  style="position:absolute;" onclick="start()">
+        <div class="start"  style="position:absolute;" onclick="start()">
+            
+            <img src="img/play.png"  style=" position:absolute; cursor:pointer;   height: 44px;" alt="">
+        </div>  
+
+        <img src="img/pipe.png" class="pipe">
+        <img src="img/clouds.png" class="cloud" style="top:20px; z-index: 1;"alt="">
+        <img src="img/clouds.png" class="cloud2" style="top:10px; right: 10px;" alt="">
         
-        <img src="img/play.png"  style=" position:absolute; cursor:pointer;   height: 44px;" alt="">
-    </div>  
-
-    <img src="img/pipe.png" class="pipe">
-    <img src="img/clouds.png" class="cloud" style="top:20px; z-index: 1;"alt="">
-    <img src="img/clouds.png" class="cloud2" style="top:10px; right: 10px;" alt="">
+        <img src="img/marioParado.png"  class="mario ">
     
-    <img src="img/marioParado.png"  class="mario ">
-   
-    <div class="gameover escondido"  onclick="resetar()" style="position:absolute; ">
-        
-        <img src="img/recarregar.png"  style=" position:absolute; cursor:pointer;   height: 44px;" alt="">
-    </div>   
+        <div class="gameover escondido"  onclick="resetar()" style="position:absolute; ">
+            <img src="img/recarregar.png"  style=" position:absolute; cursor:pointer;   height: 44px;" alt="">
+        </div>   
 
     </div>
-    <button  class="botaoJump" onclick="jumpButon()"> PULAR </button>
+<!-- a tag A esta sendo usado como botão, por que a função é assionada assim que fazemos o click sobre ela, ja o button, a ação só é realizada assim que solta o click do mouse  -->
+    <a class="botaoJump"> PULAR </a>
+
+
 </div>
 
 <script src="js/scripty.js"></script>

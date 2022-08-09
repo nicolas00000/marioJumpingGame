@@ -28,6 +28,7 @@
 .gameover,
 .start{
     background-color: gray;
+    z-index: 2;
     width:130px;
     height:130px;
     display:flex;
@@ -63,6 +64,14 @@
     width:80%;
     border-radius:5px;
     margin-top:10px;
+    background: #66339930;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    /* font-family: roboto; */
+    cursor: pointer;
+    border: 1px solid;
 }
 .escondido{
     display:none;

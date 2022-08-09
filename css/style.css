@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction:column;
 }
 
 .borda{
@@ -24,7 +25,8 @@
     justify-content:center;
 }
 
-.gameover{
+.gameover,
+.start{
     background-color: gray;
     width:130px;
     height:130px;
@@ -35,7 +37,16 @@
     font-size:2px;
 
 }
+.cloudRun{
+    animation: cloud-movimention 24s infinite linear;
+}
+.cloudRun2{
+    animation: cloudMove 30s infinite linear  !important ; 
+}
 
+.pipeRun{
+    animation: pipe 1.8s infinite linear;
+}
 .pipe{
     position:absolute;
     bottom: 0;
@@ -43,18 +54,15 @@
     width: 75px;
     z-index: 1;
     right: 0%;
-    animation: pipe 1.8s infinite linear;
     /* conforme o tempo passa quero aumentar a velocidade pelo js */
 }
 
+
 .botaoJump{
-    position:absolute;
-    left:0;
     height: 40px;
-    width:60px;
+    width:80%;
     border-radius:5px;
-    bottom: 5px;
-    left: 30px;
+    margin-top:10px;
 }
 .escondido{
     display:none;
@@ -64,25 +72,19 @@
     position: absolute;
     bottom: 0px;
     left:0;
-    width: 170px; 
+    width: 90px; 
     z-index: 1;
 }
 
 .jump{
-    animation: jumpe 600ms ease-out;
+    animation: jumpe 0.9s ease-out ;
 }
 
 .cloud,
 .cloud2{
     width: 350px;
     position: absolute;
-    animation: cloud-movimention 24s infinite linear;
 }
-.cloud2{
-    animation: cloudMove 30s infinite linear  !important ; 
-
-}
-
 
 
 @keyframes pipe {
@@ -104,11 +106,51 @@
     50%{
         bottom: 190px;
     }
-    60%{
-        bottom: 200px;
+    55%{
+        bottom: 190px;
     }
+    60%{
+        bottom: 190px;
+    }
+    70%{
+        bottom: 180px;
+    }
+    75%{
+        bottom: 170px;
+    }
+    78%{
+        bottom: 164px;
+    }
+    80%{
+        bottom: 160px;
+    }
+    83%{
+        bottom: 155px;
+    }
+    85%{
+        bottom: 144px;
+    }
+    88%{
+        bottom: 136px;
+    }
+    90%{
+        bottom: 120px;
+    }
+    95%{
+        bottom:110px;
+    }
+    97%{
+        bottom:100px;
+    }
+    98%{
+        bottom:70px;
+    }
+    99%{
+        bottom:50px;
+    }
+    
     100%{
-        bottom:0px;
+        bottom: 0px;
     }
 }
 
